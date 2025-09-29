@@ -1,0 +1,110 @@
+:root {
+	/* Color Default variables */
+	--base-white-color: #fff8f6;
+	--base-black-color: #2f2f2f;
+	--dark-neutral-color: var(--dark-neutral-900);
+	--primary-color: var(--primary-color-900);
+	--accent-1-color: var(--accent-1-900);
+	--accent-2-color: var(--accent-2-900);
+	--success-color: var(--success-900);
+	--error-color: var(--error-900);
+	--warning-color: var(--warning-900);
+
+	/* Colour Variables */
+	--dark-neutral-900: #2f2f2f;
+	--dark-neutral-800: #4d4d4d;
+	--dark-neutral-700: #808080;
+	--dark-neutral-600: #b3b3b3;
+	--dark-neutral-500: #e6e6e6;
+
+	--primary-color-900: #df2077;
+	--primary-color-800: #e54d92;
+	--primary-color-700: #ec79ad;
+	--primary-color-600: #f2a6c8;
+	--primary-color-500: #f9d2e4;
+
+	--accent-1-900: #194d4d;
+	--accent-1-800: #267373;
+	--accent-1-700: #339999;
+	--accent-1-600: #66cccc;
+	--accent-1-500: #b3e5e5;
+
+	--accent-2-900: #8a570f;
+	--accent-2-800: #bd830f;
+	--accent-2-700: #f2b90d;
+	--accent-2-600: #f7d56e;
+	--accent-2-500: #faea9e;
+
+	--success-900: #0e740d;
+	--success-800: #1a8a14;
+	--success-700: #26a21b;
+	--success-600: #32b928;
+	--success-500: #3ecf22;
+
+	--error-900: #660000;
+	--error-800: #800000;
+	--error-700: #990000;
+	--error-600: #b20000;
+	--error-500: #cc0000;
+
+	--warning-900: #8a570f;
+	--warning-800: #bd830f;
+	--warning-700: #f2b90d;
+	--warning-600: #f7d56e;
+	--warning-500: #faea9e;
+
+	/* Font variables */
+	--font-base: "Roboto", Arial, sans-serif;
+	--font-size-base: 16px;
+	--font-size-large: 2rem;
+
+	/* Padding variables */
+	--spacing-xs: 4px;
+	--spacing-sm: 8px;
+	--spacing-md: 16px;
+	--spacing-lg: 32px;
+
+	/* margin variables */
+	--margin-xs: 16px;
+	--margin-sm: 32px;
+	--margin-md: 64px;
+	--margin-lg: 128px;
+	--margin-xl: 256px;
+
+	/* font variables */
+	--font-size-xs: 12px;
+	--font-size-sm: 14px;
+	--font-size-md: 16px;
+	--font-size-lg: 20px;
+	--font-size-xl: 24px;
+
+	/*  Web  font */
+	--h1-web: 600 32px/48px var(--font-base);
+	--h2-web: 600 28px/42px var(--font-base);
+	--h3-web: 500 24px/36px var(--font-base);
+	--label-web: 500 24px/36px var(--font-base);
+	--p-lg-web: 400 24px/36px var(--font-base);
+	--p-sm-web: 400 16px/24px var(--font-base);
+	--btn-lg-web: 600 32px/64px var(--font-base);
+	--btn-md-web: 600 20px/40px var(--font-base);
+	--btn-sm-web: 600 20px/32px var(--font-base);
+
+	/*  Mobile font  */
+	--h1-mob: 600 28px/42px var(--font-base);
+	--h2-mob: 600 24px/36px var(--font-base);
+	--h3-mob: 600 20px/30px var(--font-base);
+	--label-mob: 500 24px/36px var(--font-base);
+	--p-mob: 400 16px/24px var(--font-base);
+	--btn-lg-mob: 600 32px/64px var(--font-base);
+	--btn-md-mob: 600 20px/40px var(--font-base);
+	--btn-sm-mob: 600 20px/32px var(--font-base);
+
+	/*  Web margin sides  */
+	--margin-web-sm: 0 64px;
+	--margin-web-m: 0 128px;
+	--margin-web-l: 0 256px;
+
+	/*  Mobile margin sides  */
+	--margin-mob-sm: 0 32px;
+	--margin-mob-m: 0 16px;
+}
