@@ -1,0 +1,55 @@
+@import url("base.css");
+@import url("variables.css");
+header {
+	background-color: var(--base-white-color);
+	display: flex;
+	align-items: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: var(--primary-color);
+
+	.nav-links {
+		display: flex;
+		gap: 50px;
+		padding: 0 20px;
+		h3 {
+			color: var(--base-white-color);
+		}
+	}
+	.social-media {
+		margin-left: auto;
+		display: flex;
+		gap: 20px;
+		padding-right: 20px;
+		a {
+			color: var(--base-white-color);
+		}
+	}
+}
+
+.logo {
+	background-color: var(--primary-color-700);
+	width: 75px;
+	height: 75px;
+}
+
+.hero {
+	height: 600px;
+	.description {
+		background-color: var(--primary-color-500);
+		padding: 90px;
+		display: flex;
+		flex-direction: column;
+
+		button {
+			margin-top: auto;
+			align-self: flex-end;
+		}
+	}
+	.product-img {
+		background-color: greenyellow;
+		min-width: 630px;
+	}
+}

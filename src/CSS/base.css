@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+h1 {
+	font: var(--h1-web);
+	margin: 20px 0;
+}
+h2 {
+	font: var(--h2-web);
+}
+h3 {
+	font: var(--h3-web);
+}
+label {
+	font: var(--label-web);
+}
+p.sm {
+	font: var(--p-sm-web);
+}
+p.lg {
+	font: var(--p-lg-web);
+}
+a {
+	color: black;
+}
+button {
+	background-color: var(--base-white-color);
+	color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	padding: 0 25px;
+	max-width: 128px;
+	border-radius: 10px;
+}
+button.lg {
+	font: var(--btn-lg-web);
+	max-height: 64px;
+	border: 3px solid var(--primary-color);
+}
+button.md {
+	font: var(--btn-md-web);
+	max-height: 40px;
+}
+button.sm {
+	font: var(--btn-sm-web);
+	max-height: 32px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	.grid-item {
+	}
+}
