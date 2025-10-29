@@ -6,6 +6,9 @@
 	font-family: "Poppins", sans-serif;
 	font-style: normal;
 }
+main {
+	background-color: var(--base-white-color);
+}
 h1 {
 	font: var(--h1-web);
 	margin: 20px 0;
@@ -25,15 +28,21 @@ p.sm {
 p.lg {
 	font: var(--p-lg-web);
 }
+span.sm {
+	font: var(--p-sm-web);
+}
+span.lg {
+	font: var(--p-lg-web);
+}
 a {
 	color: black;
 }
 section {
-	margin: 96px 0; /* Add spacing between all sections */
+	margin: 96px 64px; /* Add spacing between all sections */
 }
 
 section:first-of-type {
-	margin-top: 0; /* Remove top margin for the first section */
+	margin: 0 0 96px 0; /* Remove top margin for the first section */
 }
 
 section:last-of-type {
@@ -85,13 +94,26 @@ button.sm {
 	margin: 0 64px;
 	gap: 24px;
 }
+.review-card {
+	border-radius: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
 
+	p {
+		color: var(--base-dark-color);
+	}
+}
 .product-card {
 	background-color: var(--dark-neutral-500);
-	border-radius: 20px;
+	border-radius: 20px 20px 20px 0;
 	width: 320px;
 	height: 400px;
 	position: relative;
+	.tag {
+		border-radius: 0;
+		padding: 10px;
+	}
 	img {
 		min-width: 100%;
 		min-height: 300px;
@@ -122,4 +144,11 @@ button.sm {
 	padding: 5px 10px;
 	border-radius: 10px;
 	width: fit-content;
+}
+.origin-price {
+	text-decoration: line-through;
+	color: var(--dark-neutral-700);
+}
+.discount-price {
+	color: var(--error-500);
 }

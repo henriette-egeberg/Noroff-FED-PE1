@@ -53,20 +53,29 @@ header {
 	.product-img {
 		height: 600px;
 	}
-	p {
-		font: var(--p-lg-web);
-	}
 	.product-info {
-		background-color: var(--primary-color-500);
+		background-color: var(--base-white-color);
 		padding: 20px;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
+		p {
+			font: var(--p-lg-web);
+		}
 
 		.buttons {
 			margin-top: auto;
 			align-self: flex-end;
 			gap: 16px;
+		}
+	}
+	.reviews {
+		h2 {
+			margin-bottom: 32px;
+		}
+		.grid-container {
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 32px;
 		}
 	}
 }
