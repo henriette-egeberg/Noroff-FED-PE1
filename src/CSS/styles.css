@@ -48,8 +48,25 @@ header {
 			align-self: flex-end;
 		}
 	}
+}
+.product-page {
 	.product-img {
-		background-color: greenyellow;
-		min-width: 630px;
+		height: 600px;
+	}
+	p {
+		font: var(--p-lg-web);
+	}
+	.product-info {
+		background-color: var(--primary-color-500);
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		.buttons {
+			margin-top: auto;
+			align-self: flex-end;
+			gap: 16px;
+		}
 	}
 }

@@ -3,6 +3,8 @@
 	padding: 0;
 	text-decoration: none;
 	list-style-type: none;
+	font-family: "Poppins", sans-serif;
+	font-style: normal;
 }
 h1 {
 	font: var(--h1-web);
@@ -70,6 +72,10 @@ button.sm {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	.grid-item {
+	}
+	.product-img {
+		background-color: greenyellow;
+		min-width: 630px;
 	}
 }
 .product-container {
