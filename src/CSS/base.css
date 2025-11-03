@@ -6,7 +6,7 @@
 	font-family: "Poppins", sans-serif;
 	font-style: normal;
 }
-main {
+body {
 	background-color: var(--base-white-color);
 }
 h1 {
