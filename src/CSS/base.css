@@ -53,12 +53,12 @@ button {
 	color: var(--primary-color);
 	border: 2px solid var(--primary-color);
 	padding: 0 25px;
-	max-width: 128px;
+	max-width: 256px;
 	border-radius: 10px;
 }
 button.xl {
 	font: var(--btn-lg-web);
-	max-height: 64px;
+	min-height: 64px;
 	border: 3px solid var(--primary-color);
 }
 button.lg {
@@ -70,11 +70,11 @@ button.lg {
 }
 button.md {
 	font: var(--btn-md-web);
-	max-height: 40px;
+	min-height: 40px;
 }
 button.sm {
 	font: var(--btn-sm-web);
-	max-height: 32px;
+	min-height: 32px;
 }
 
 .grid-container {
