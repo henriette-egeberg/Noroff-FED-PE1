@@ -79,7 +79,8 @@ header {
 		}
 	}
 }
-.signup {
+.signup,
+.login {
 	h1 {
 		margin-top: 32px;
 	}
