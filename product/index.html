@@ -3,8 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="src/CSS/styles.css" />
-		<link rel="stylesheet" href="src/JS/app.js" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../src/CSS/styles.css" />
+		<link rel="stylesheet" href="../src/JS/app.js" />
 		<title>Unboundix</title>
 	</head>
 	<body>
@@ -24,37 +30,36 @@
 				<li><a href="#">IG</a></li>
 			</ul>
 		</header>
-		<main>
-			<section class="product-info">
-				<div class="background-img">
-					<div class="tags">fashion<span class="tag">shoes</span></div>
+		<main class="product-page">
+			<section class="grid-container">
+				<div class="background-img grid-item product-img">
 					<span class="share-btn"></span>
 				</div>
-				<div>
+				<div class="product-info">
 					<div class="rating-stars"></div>
 					<span class="rating-num">3,3 Stars</span>
 					<h1>Black boots</h1>
 					<p>Stylish and comfortable black leather boots for all occasions.</p>
-					<span class="origin-price">$899.99</span>
-					<span class="discount-price">$799.99</span>
-					<button class="buy-now">Buy</button>
-					<button class="add-cart">+</button>
+					<div><span class="origin-price lg">$899.99</span> <span class="discount-price lg">$799.99</span></div>
+					<div class="buttons"><button class="buy-now xl">Buy</button> <button class="add-cart xl">+</button></div>
 				</div>
 			</section>
 			<section class="reviews">
 				<h2>Reviews:</h2>
-				<article>
-					<span class="username">John P.</span><span class="rating-stars"></span>
-					<p>Bought these earrings for my wife and she loves them!</p>
-				</article>
-				<article>
-					<span class="username">David K.</span><span class="rating-stars"></span>
-					<p>It works, but it's a very expensive. I'll probably buy a cheaper alternative next time.</p>
-				</article>
-				<article>
-					<span class="username">Mike M.</span><span class="rating-stars"></span>
-					<p>Terrible audio.</p>
-				</article>
+				<div class="grid-container">
+					<article class="review-card grid-item">
+						<span class="username lg">John P.</span><span class="rating-stars"></span>
+						<p class="sm">Bought these earrings for my wife and she loves them!</p>
+					</article>
+					<article class="review-card grid-item">
+						<span class="username lg">David K.</span><span class="rating-stars"></span>
+						<p class="sm">It works, but it's a very expensive. I'll probably buy a cheaper alternative next time.</p>
+					</article>
+					<article class="review-card grid-item">
+						<span class="username lg">Mike M.</span><span class="rating-stars"></span>
+						<p class="sm">Terrible audio.</p>
+					</article>
+				</div>
 			</section>
 		</main>
 		<footer>
