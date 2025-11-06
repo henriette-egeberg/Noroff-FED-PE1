@@ -3,6 +3,7 @@
 header {
 	background-color: var(--base-white-color);
 	display: flex;
+	height: 75px;
 	align-items: center;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	position: sticky;
@@ -23,16 +24,20 @@ header {
 		display: flex;
 		gap: 20px;
 		padding-right: 20px;
+		height: 45px;
 		a {
 			color: var(--base-white-color);
 		}
 	}
+	img {
+		height: 100%;
+	}
 }
 
 .logo {
-	background-color: var(--primary-color-700);
-	width: 75px;
-	height: 75px;
+	width: auto;
+	height: 56px;
+	margin: 0 15px;
 }
 
 .hero {
