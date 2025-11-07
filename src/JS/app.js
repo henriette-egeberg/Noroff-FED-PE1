@@ -104,4 +104,43 @@ const createProduct = async () => {
 
 // Call the function to generate the product card for the first item
 createProduct();
-// initial render 		renderSlide(products[currentIndex]);  		// change slide every 10 seconds 		heroContainer._carouselInterval = setInterval(() => { 			currentIndex = (currentIndex + 1) % products.length;// start the hero carousel};	}		console.error("Error fetching hero data:", error);	} catch (error) {		}, 10000);			renderSlide(products[currentIndex]);
+
+const createProductPage = async () => {
+	try {
+		// Fetch data from the API
+		const response = await fetch(url);
+		const products = await response.json();
+		const product = products.data[0]; // Get the first product
+		console.log(product);
+
+		// Select the product container
+		const productContainer = document.querySelector(".product-page-container");
+
+		// Clear the container
+		productContainer.innerHTML = "";
+
+		// Generate the product card for the single product
+		const productCard = `
+
+				<div class="background-img grid-item product-img" style="background-image: url('${product.image.url}');">
+					<span class="share-btn"></span>
+				</div>
+				<div class="product-info">
+					<div class="rating-stars"></div>
+					<span class="rating-num">${product.reviews[0].rating} Stars</span>
+					<h1>${product.title}</h1>
+					<p>${product.description}</p>
+					<div><span class="origin-price lg">${product.price}</span> <span class="discount-price lg">${product.discountedPrice}</span></div>
+					<div class="buttons"><button class="buy-now xl">Buy</button> <button class="add-cart xl">+</button></div>
+				</div>
+        `;
+
+		// Append the product card to the container
+		productContainer.innerHTML = productCard;
+	} catch (error) {
+		console.error("Error fetching product page data:", error);
+	}
+};
+
+// Call the function to populate the product page
+createProductPage();
