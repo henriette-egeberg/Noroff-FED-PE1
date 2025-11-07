@@ -54,7 +54,8 @@ header {
 		display: flex;
 		flex-direction: column;
 
-		button {
+		button,
+		a {
 			margin-top: auto;
 			align-self: flex-end;
 		}
