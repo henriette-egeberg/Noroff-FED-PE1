@@ -28,7 +28,7 @@ const createHero = async () => {
 				<div class="description grid-item">
 					<h1>${title}</h1>
 					<p class="lg">${description}</p>
-					<button class="xl">Buy</button>
+					<a href="product/#">"<button class="xl">Buy</button></a>
 				</div>
 				<div class="product-img grid-item"><img src="${imgUrl}" alt="${imgAlt}" style="max-width:100%;height:auto;display:block;" /></div>
 			`;
@@ -86,7 +86,7 @@ const createProduct = async () => {
 							<span class="discount-price">$${product.discountedPrice}</span>
 						</li>
 						<li>
-							<button class="buy-now lg">Buy</button>
+							<a href="product/#"><button class="buy-now lg">Buy</button></a>
 							<button class="add-cart lg">+</button>
 						</li>
 					</ul>
