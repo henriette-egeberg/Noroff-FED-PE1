@@ -22,13 +22,14 @@ const createHero = async () => {
 			const imgAlt = product.image && product.image.alt ? product.image.alt : product.title || "product";
 			const title = product.title || "";
 			const description = product.description || "";
+			const id = product.id || "";
 
 			heroContainer.innerHTML = `
 
 				<div class="description grid-item">
 					<h1>${title}</h1>
 					<p class="lg">${description}</p>
-					<a href="product/#">"<button class="xl">Buy</button></a>
+					<a href="product/?id=${id}">"<button class="xl">Buy</button></a>
 				</div>
 				<div class="product-img grid-item"><img src="${imgUrl}" alt="${imgAlt}" style="max-width:100%;height:auto;display:block;" /></div>
 			`;
@@ -85,8 +86,8 @@ const createProduct = async () => {
 							<span class="origin-price">$${product.price}</span>
 							<span class="discount-price">$${product.discountedPrice}</span>
 						</li>
-						<li>
-							<a href="product/#"><button class="buy-now lg">Buy</button></a>
+						<li>					
+							<a href="product/?id=${product.id}"><button class="buy-now lg">Buy</button></a>
 							<button class="add-cart lg">+</button>
 						</li>
 					</ul>
@@ -104,43 +105,3 @@ const createProduct = async () => {
 
 // Call the function to generate the product card for the first item
 createProduct();
-
-const createProductPage = async () => {
-	try {
-		// Fetch data from the API
-		const response = await fetch(url);
-		const products = await response.json();
-		const product = products.data[0]; // Get the first product
-		console.log(product);
-
-		// Select the product container
-		const productContainer = document.querySelector(".product-page-container");
-
-		// Clear the container
-		productContainer.innerHTML = "";
-
-		// Generate the product card for the single product
-		const productCard = `
-
-				<div class="background-img grid-item product-img" style="background-image: url('${product.image.url}');">
-					<span class="share-btn"></span>
-				</div>
-				<div class="product-info">
-					<div class="rating-stars"></div>
-					<span class="rating-num">${product.reviews[0].rating} Stars</span>
-					<h1>${product.title}</h1>
-					<p>${product.description}</p>
-					<div><span class="origin-price lg">${product.price}</span> <span class="discount-price lg">${product.discountedPrice}</span></div>
-					<div class="buttons"><button class="buy-now xl">Buy</button> <button class="add-cart xl">+</button></div>
-				</div>
-        `;
-
-		// Append the product card to the container
-		productContainer.innerHTML = productCard;
-	} catch (error) {
-		console.error("Error fetching product page data:", error);
-	}
-};
-
-// Call the function to populate the product page
-createProductPage();
