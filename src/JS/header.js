@@ -2,7 +2,7 @@ const headerRight = document.querySelector(".header-right");
 headerRight.innerHTML = ""; // Clear the container before appending
 headerRight.innerHTML += `				
     <li class="some">
-		<a href="https://www.tiktok.com" target="_blank"><img src="../../Noroff-FED-PE1/src/img/tiktok-ikon.png" alt="tiktok logo" /></a>
+		<a href="https://www.tiktok.com" target="_blank"><img src="..//src/img/tiktok-ikon.png" alt="tiktok logo" /></a>
 	</li>
 	<li class="some">
 		<a href="https://www.facebook.com" target="_blank"><img src="../src/img/facebook-icon.png" alt="facebook logo" /></a>
@@ -27,25 +27,7 @@ headerRight.innerHTML += `
 		<img class="ig" src="../src/img/menu-icon.png" alt="Menu" />
 	</li>
     `;
-const checkAuthentication = () => {
-	const isAuthenticated = localStorage.getItem("authToken") !== null;
-	const cartIcon = document.querySelector(".cart-icon");
-	const profileIcon = document.querySelector(".profile-icon");
 
-	if (isAuthenticated) {
-		console.log("User is authenticated");
-		// Remove the "not-logged-in" class
-		cartIcon.classList.remove("active");
-		profileIcon.classList.remove("active");
-	} else {
-		console.log("User is not authenticated");
-		// Add the "not-logged-in" class
-		cartIcon.classList.add("active");
-		profileIcon.classList.add("active");
-	}
-};
-// Check authentication status on page load
-checkAuthentication();
 const createProductPage = async () => {
 	try {
 		showLoading(productContainer);
