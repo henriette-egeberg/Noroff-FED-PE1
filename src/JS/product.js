@@ -53,7 +53,7 @@ const createProductPage = async () => {
                     <span class="discount-price lg">$${product.discountedPrice}</span>
                 </div>
 				<div class="buttons">
-                    <button class="buy-now xl">Buy</button> 
+                    <a href="../../cart">"<button class="buy-now xl">Buy</button></a>
                     <button class="add-cart xl">+</button>
                     <button class="removeCart_btn xl active">-</button>
                 </div>
@@ -81,13 +81,15 @@ function addToCart() {
 	const title = document.querySelector(".product-info h1").textContent;
 	const price = document.querySelector(".origin-price").textContent;
 	const discountPrice = document.querySelector(".discount-price").textContent;
-	console.log(id, title, price);
+	const imageUrl = document.querySelector(".background-img").style.backgroundImage;
+	console.log(id, title, price, discountPrice, imageUrl);
+	console.log(imageUrl);
 
 	// Check if the product is already in the cart
 	if (cart.some((item) => item.id === id)) {
 		alert("Product is already in the cart.");
 	} else {
-		cart.push({ id: id, title: title, price: price, discountPrice: discountPrice });
+		cart.push({ id: id, title: title, price: price, discountPrice: discountPrice, imageUrl: imageUrl });
 		localStorage.setItem("cart", JSON.stringify(cart));
 		alert("Product added to cart!");
 		const addCartToggle = document.querySelector(".add-cart");
