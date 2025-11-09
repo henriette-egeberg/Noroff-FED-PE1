@@ -38,7 +38,7 @@ const createProductPage = async () => {
 		productContainer.innerHTML += `				
 			<div class="background-img grid-item product-img" style="background-image: url('${product.image.url}');">	
                 <button class="shareBtnClick" style="background: none; border: none;" onclick="copyOnClick()">
-                    <img class="cart_list_img" src="../../src/img/share-icon.png" alt="Product_title_info" />
+                    <img class="cart_list_img" src="../../Noroff-FED-PE1/src/img/share-icon.png" alt="Product_title_info" />
                 </button>
 			</div>
 			<div class="product-info">
@@ -52,7 +52,7 @@ const createProductPage = async () => {
                     <span class="discount-price lg">$${product.discountedPrice}</span>
                 </div>
 				<div class="buttons">
-                    <a href="../../cart">"<button class="buy-now xl">Buy</button></a>
+                    <a href="../../Noroff-FED-PE1/cart">"<button class="buy-now xl">Buy</button></a>
                     <button class="add-cart xl active">+</button>
                     <button class="removeCart_btn xl active">-</button>
                 </div>
