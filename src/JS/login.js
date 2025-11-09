@@ -33,3 +33,11 @@ loginButton.addEventListener("click", () => {
 });
 
 // You can expand this with actual login/logout functions as needed.
+const isAuthenticated = localStorage.getItem("authToken") !== null;
+if (isAuthenticated) {
+	console.log("User is authenticated");
+	const login_form = document.querySelector(".login-form");
+	login_form.innerHTML = "<h1>Login successful!</h1>";
+} else {
+	console.log("User is not authenticated");
+}

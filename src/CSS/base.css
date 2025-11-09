@@ -89,6 +89,9 @@ button.sm {
 		min-width: 630px;
 	}
 }
+.active {
+	display: none;
+}
 .product-container {
 	display: flex;
 	justify-content: space-between;

@@ -87,8 +87,7 @@ const createProduct = async () => {
 							<span class="discount-price">$${product.discountedPrice}</span>
 						</li>
 						<li>					
-							<a href="product/?id=${product.id}"><button class="buy-now lg">Buy</button></a>
-							<button class="add-cart lg">+</button>
+
 						</li>
 					</ul>
 				</div>
