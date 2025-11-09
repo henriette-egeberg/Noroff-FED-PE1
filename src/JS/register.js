@@ -6,9 +6,9 @@ const loginButton = document.querySelector("#loginButton"); // Replace with the 
 registerButton.addEventListener("click", () => {
 	console.log("Button clicked");
 	// Perform the POST request when the button is clicked
-	const name = "Unboundic"; // Replace with a valid username
-	const email = "Unboundix@stud.noroff.no"; // Replace with a valid email
-	const password = "stringst"; // Replace with a valid password
+	const name = "Unboundix"; // Replace with a valid username
+	const email = "unboundixtest@stud.noroff.no"; // Replace with a valid email
+	const password = "unboundix"; // Replace with a valid password
 	fetch(`https://v2.api.noroff.dev/auth/register`, {
 		method: "POST",
 		body: JSON.stringify({

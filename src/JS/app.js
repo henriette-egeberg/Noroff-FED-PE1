@@ -31,7 +31,9 @@ const createHero = async () => {
 					<p class="lg">${description}</p>
 					<a href="product/?id=${id}">"<button class="xl">Buy</button></a>
 				</div>
-				<div class="product-img grid-item"><img src="${imgUrl}" alt="${imgAlt}" style="max-width:100%;height:auto;display:block;" /></div>
+				<div class="product-img grid-item">
+					<img src="${imgUrl}" alt="${imgAlt}" style="max-width:100%;height:auto;display:block;" />
+				</div>
 			`;
 		};
 
@@ -69,7 +71,7 @@ const createProduct = async () => {
 		// Clear the container
 		productContainer.innerHTML = "";
 		// Limit the product list to a maximum of 9 items
-		const limitedProductList = productList.slice(0, 9);
+		const limitedProductList = productList.slice(0, 12);
 		// Generate a product card for the first product
 
 		limitedProductList.forEach((product) => {
@@ -77,21 +79,24 @@ const createProduct = async () => {
 
 			const productCard = `
             <article class="product-card">
+			<a href="product/?id=${product.id}">
 				<img src="${product.image.url}" alt="${product.image.alt}" />
 				<div class="rating-stars"></div>
 				<div class="product-info">
-					<ul>
+					<ul>					
 						<li>
+
 							<div class="tag">${product.title}</div>
 							<span class="origin-price">$${product.price}</span>
 							<span class="discount-price">$${product.discountedPrice}</span>
+					
 						</li>
 						<li>					
-							<a href="product/?id=${product.id}"><button class="buy-now lg">Buy</button></a>
-							<button class="add-cart lg">+</button>
+
 						</li>
 					</ul>
 				</div>
+				</a>
 			</article>
         `;
 
