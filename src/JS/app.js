@@ -29,7 +29,7 @@ const createHero = async () => {
 				<div class="description grid-item">
 					<h1>${title}</h1>
 					<p class="lg">${description}</p>
-					<a href="product/?id=${id}">"<button class="xl">Buy</button></a>
+					<a href="Noroff-FED-PE1/product/?id=${id}">"<button class="xl">Buy</button></a>
 				</div>
 				<div class="product-img grid-item">
 					<img src="${imgUrl}" alt="${imgAlt}" style="max-width:100%;height:auto;display:block;" />
