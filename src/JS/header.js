@@ -14,7 +14,7 @@ headerRight.innerHTML += `
 	</li>
 	<li class="cart-icon">
     <a href="../../cart">
-		<img class="ig" src="src/img/cart-ikon.png" alt="Profile" />
+		<img class="ig" src="../src/img/cart-ikon.png" alt="Profile" />
         </a>
 	</li>
     <li class="profile-icon">
@@ -24,7 +24,7 @@ headerRight.innerHTML += `
 	</li>
     <li class="menu-icon">
 
-		<img class="ig" src="src/img/menu-icon.png" alt="Menu" />
+		<img class="ig" src="../src/img/menu-icon.png" alt="Menu" />
 	</li>
     `;
 const checkAuthentication = () => {

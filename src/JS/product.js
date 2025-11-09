@@ -53,8 +53,8 @@ const createProductPage = async () => {
                 </div>
 				<div class="buttons">
                     <a href="../../cart">"<button class="buy-now xl">Buy</button></a>
-                    <button class="add-cart xl">+</button>
-                    <button class="removeCart_btn xl">-</button>
+                    <button class="add-cart xl active">+</button>
+                    <button class="removeCart_btn xl active">-</button>
                 </div>
 			</div>
             `;
