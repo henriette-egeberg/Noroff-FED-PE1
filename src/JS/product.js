@@ -11,6 +11,25 @@ function hideLoading(container) {
 	container.innerHTML = "";
 }
 
+function addToCart() {
+	// Check if the cart already exists in local storage
+	let cart = JSON.parse(localStorage.getItem("cart")) || [];
+	const params = new URLSearchParams(window.location.search);
+	const id = params.get("id");
+	const title = document.querySelector(".grid_item.desc h1").textContent;
+	const price = document.querySelector(".grid_item.desc .price").textContent;
+
+	// Check if the product is already in the cart
+	if (cart.some((item) => item.id === id)) {
+		alert("Product is already in the cart.");
+	} else {
+		cart.push({ id: id, title: title, price: price });
+		localStorage.setItem("cart", JSON.stringify(cart));
+		alert("Product added to cart!");
+	}
+}
+
+// Function to populate the product page
 const createProductPage = async () => {
 	try {
 		showLoading(productContainer);
