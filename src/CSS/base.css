@@ -165,3 +165,12 @@ button.sm {
 .discount-price {
 	color: var(--error-500);
 }
+footer {
+	background-color: var(--primary-color);
+	color: var(--base-white-color);
+	height: 256px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 96px;
+}

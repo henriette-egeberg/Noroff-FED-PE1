@@ -11,10 +11,6 @@ function hideLoading(container) {
 	container.innerHTML = "";
 }
 
-// function to add product to cart
-
-// function to remove product from cart
-
 // Function to populate the product page
 const createProductPage = async () => {
 	try {
@@ -40,14 +36,17 @@ const createProductPage = async () => {
 		hideLoading(productContainer);
 		productContainer.innerHTML = ""; // Clear the container before appending
 		productContainer.innerHTML += `				
-			<div class="background-img grid-item product-img" style="background-image: url('${product.image.url}');">
-				<span class="share-btn"></span>
+			<div class="background-img grid-item product-img" style="background-image: url('${product.image.url}');">	
+                <button class="shareBtnClick" style="background: none; border: none;" onclick="copyOnClick()">
+                    <img class="cart_list_img" src="../../src/img/share-icon.png" alt="Product_title_info" />
+                </button>
 			</div>
 			<div class="product-info">
-				<div class="rating-stars"></div>
-				<span class="rating-num"></span>
+				<div class="rating-stars">Star Rating: ${product.rating}</div>
+				<span>Tags: ${product.tags}</span>
 				<h1>${product.title}</h1>
 				<p>${product.description}</p>
+                
 				<div>
                     <span class="origin-price lg">$${product.price}</span> 
                     <span class="discount-price lg">$${product.discountedPrice}</span>
@@ -55,13 +54,53 @@ const createProductPage = async () => {
 				<div class="buttons">
                     <a href="../../cart">"<button class="buy-now xl">Buy</button></a>
                     <button class="add-cart xl">+</button>
-                    <button class="removeCart_btn xl active">-</button>
+                    <button class="removeCart_btn xl">-</button>
                 </div>
-			</div>`;
+			</div>
+            `;
+
+		product.reviews.forEach((product) => {
+			console.log("for each");
+			const reviews = document.querySelector(".review-container");
+			reviews.innerHTML = ""; // Clear the container before appending
+			reviews.innerHTML += `				
+          
+					<article class="review-card grid-item">
+						<span class="username lg">${product.username}</span><span class="rating-stars">Star Rating: ${product.rating}</span>
+						<p class="sm">${product.description}</p>
+					</article>
+				
+    `;
+		});
+		// Check if the user is authenticated
+		const checkAuthentication = () => {
+			const isAuthenticated = localStorage.getItem("authToken") !== null;
+			const addCartBtn = document.querySelector(".add-cart");
+			const removeCartBtn = document.querySelector(".removeCart_btn");
+
+			if (isAuthenticated) {
+				console.log("User is authenticated");
+				// Remove the "not-logged-in" class
+				addCartBtn.classList.remove("active");
+				removeCartBtn.classList.remove("active");
+			} else {
+				console.log("User is not authenticated");
+				// Add the "not-logged-in" class
+				addCartBtn.classList.add("active");
+				removeCartBtn.classList.add("active");
+			}
+		};
+
+		// Add event listener to the login button
+
+		// Check authentication status on page load
+		checkAuthentication();
 
 		// Add event listener to the button after rendering
 		const addCart = document.querySelector(".add-cart");
 		const removeCart = document.querySelector(".removeCart_btn");
+		const buyBtn = document.querySelector(".buy-now");
+		buyBtn.addEventListener("click", addToCart);
 		addCart.addEventListener("click", addToCart);
 		removeCart.addEventListener("click", removeFromCart);
 	} catch (error) {
@@ -92,10 +131,6 @@ function addToCart() {
 		cart.push({ id: id, title: title, price: price, discountPrice: discountPrice, imageUrl: imageUrl });
 		localStorage.setItem("cart", JSON.stringify(cart));
 		alert("Product added to cart!");
-		const addCartToggle = document.querySelector(".add-cart");
-		const removeCartBtn = document.querySelector(".removeCart_btn");
-		addCartToggle.classList.toggle("active");
-		removeCartBtn.classList.toggle("active");
 	}
 }
 
@@ -109,17 +144,16 @@ function removeFromCart() {
 		cart = cart.filter((item) => item.id !== id);
 		localStorage.setItem("cart", JSON.stringify(cart));
 		alert("Product removed from cart!");
-		const addCartToggle = document.querySelector(".add-cart");
-		const removeCartBtn = document.querySelector(".removeCart_btn");
-		addCartToggle.classList.toggle("active");
-		removeCartBtn.classList.toggle("active");
 	} else {
 		alert("Product is not in the cart.");
 	}
 }
-addToCart();
-removeFromCart();
-
+function copyOnClick() {
+	let shareLink = document.querySelector(".shareBtnClick");
+	shareLink.value = window.location.href;
+	navigator.clipboard.writeText(shareLink.value);
+	alert("Link copied");
+}
 //    https://www.example.com/products/12345/awesome-product-name
 //    https://www.example.com/products?id=12345
 //    https://www.example.com/cart/?add-to-cart=12345

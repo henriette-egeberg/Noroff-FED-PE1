@@ -10,29 +10,27 @@
 
 		<link rel="stylesheet" href="../src/CSS/styles.css" />
 		<script src="../src/JS/cart.js" defer></script>
+		<script src="../src/JS/header.js" defer></script>
+
 		<title>Unboundix</title>
 	</head>
 	<body>
 		<header>
-			<a href="../#"><img src="../src/img/Logo.png" alt="butterfly logo" class="logo" /></a>
+			<a href="#"><img src="src/img/Logo.png" alt="butterfly logo" class="logo" /></a>
 			<nav>
 				<ul class="nav-links">
 					<li>
 						<a href="#"><h3>Home</h3></a>
 					</li>
+					<li>
+						<a href="/register/index.html"><h3>Sign up</h3></a>
+					</li>
+					<li>
+						<a href="/login/index.html"><h3>login</h3></a>
+					</li>
 				</ul>
 			</nav>
-			<ul class="social-media">
-				<li>
-					<a href="https://www.tiktok.com" target="_blank"><img src="../src/img/tiktok-ikon.png" alt="tiktok logo" /></a>
-				</li>
-				<li>
-					<a href="https://www.facebook.com" target="_blank"><img src="../src/img/facebook-icon.png" alt="facebook logo" /></a>
-				</li>
-				<li>
-					<a href="https://www.instagram.com" target="_blank"><img class="ig" src="../src/img/insta-icon.png" alt="instagram logo" /></a>
-				</li>
-			</ul>
+			<ul class="social-media header-right"></ul>
 		</header>
 		<main>
 			<section class="cart">
@@ -57,7 +55,7 @@
 					</div>
 					<div class="grid_item cart_summary">
 						<h2>Sum Price: 890$</h2>
-						<button class="xl grid-item" type="submit">Checkout</button>
+						<a href="../checkout/"> <button class="xl grid-item" type="submit">Checkout</button> </a>
 					</div>
 				</div>
 			</section>
