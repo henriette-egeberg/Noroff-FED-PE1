@@ -1,13 +1,13 @@
 const headerRight = document.querySelector(".header-right");
 headerRight.innerHTML = ""; // Clear the container before appending
 headerRight.innerHTML += `				
-    <li>
-		<a href="https://www.tiktok.com" target="_blank"><img src="../src/img/tiktok-ikon.png" alt="tiktok logo" /></a>
+    <li class="some">
+		<a href="https://www.tiktok.com" target="_blank"><img src="../../Noroff-FED-PE1/src/img/tiktok-ikon.png" alt="tiktok logo" /></a>
 	</li>
-	<li>
+	<li class="some">
 		<a href="https://www.facebook.com" target="_blank"><img src="../src/img/facebook-icon.png" alt="facebook logo" /></a>
 	</li>
-	<li>
+	<li class="some">
 		<a href="https://www.instagram.com" target="_blank"><img class="ig" src="../src/img/insta-icon.png" alt="instagram logo" /></a>
 	</li>
 	<li>
