@@ -2,29 +2,29 @@ const headerRight = document.querySelector(".header-right");
 headerRight.innerHTML = ""; // Clear the container before appending
 headerRight.innerHTML += `				
     <li class="some">
-		<a href="https://www.tiktok.com" target="_blank"><img src="../Noroff-FED-PE1/src/img/tiktok-ikon.png" alt="tiktok logo" /></a>
+		<a href="https://www.tiktok.com" target="_blank"><img src="../src/img/tiktok-ikon.png" alt="tiktok logo" /></a>
 	</li>
 	<li class="some">
-		<a href="https://www.facebook.com" target="_blank"><img src="../Noroff-FED-PE1/src/img/facebook-icon.png" alt="facebook logo" /></a>
+		<a href="https://www.facebook.com" target="_blank"><img src="../src/img/facebook-icon.png" alt="facebook logo" /></a>
 	</li>
 	<li class="some">
-		<a href="https://www.instagram.com" target="_blank"><img class="ig" src="../Noroff-FED-PE1/src/img/insta-icon.png" alt="instagram logo" /></a>
+		<a href="https://www.instagram.com" target="_blank"><img class="ig" src="../src/img/insta-icon.png" alt="instagram logo" /></a>
 	</li>
 	<li>
 	</li>
 	<li class="cart-icon">
     <a href="../../cart">
-		<img class="ig" src="../Noroff-FED-PE1/src/img/cart-ikon.png" alt="Profile" />
+		<img class="ig" src="../src/img/cart-ikon.png" alt="Profile" />
         </a>
 	</li>
     <li class="profile-icon">
     <a href="../../">
-		<img class="ig" src="../Noroff-FED-PE1/src/img/profile-ikon.png" alt="profile icon" />
+		<img class="ig" src="../src/img/profile-ikon.png" alt="profile icon" />
         </a>
 	</li>
     <li class="menu-icon">
 
-		<img class="ig" src="../Noroff-FED-PE1/src/img/menu-icon.png" alt="Menu" />
+		<img class="ig" src="../src/img/menu-icon.png" alt="Menu" />
 	</li>
     `;
 const checkAuthentication = () => {
